@@ -118,7 +118,7 @@ body {
   /*========/HEADER MOBILE STYLES=========*/
   /*========HERO MOBILE STYLES=========*/
 .hero {
-    max-width: 320px;
+    width: 320px;
     padding: 72px 0;
     margin-left: auto;
     margin-right: auto;
@@ -132,7 +132,7 @@ body {
 
  /*=h1=*/
 .main-head {
-    max-width: 288px;
+    width: 288px;
     font-size: 36px;
     text-align: center;
     text-transform: capitalize;
@@ -234,13 +234,13 @@ body {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
         0px 1px 1px 0px rgba(46, 47, 66, 0.16),
         0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 72px;  
 }
 
 .menu-team {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .team-header {
@@ -311,12 +311,19 @@ body {
 .page-portfolio {
     background-color: var(--WHITE, #FFFFFF);
     border: 0 0 1px 0;
-    border-color: #E7E9FC;
+    border-color: #E7E9FC;    
+}
+
+.portfolio-container {
+    padding-top: 76px;
+    padding-bottom: 76px;
 }
 
 .portfolio-info {
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
+    flex-direction: column;  
+    gap: 48px;  
 }
 
 .portfolio-item {
@@ -333,8 +340,433 @@ body {
     border-top: none;
 }
 
+.portfolio-header {
+    color: var(--NAVY-BLUE, #2E2F42);
+    text-align: center;    
+    font-size: 36px;    
+    font-weight: 700;
+    line-height: 1.11;   
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+}
 
+.servises-head {    
+    font-size: 20px;    
+    font-weight: 500;
+    line-height: 1.2;    
+    letter-spacing: 0.02em;
+    color: var(--NAVY-BLUE, #2E2F42);
+}
+
+.text-sevises {
+    color: var(--SLATE, #434455);
+    font-family: Roboto;
+    font-size: 16px;    
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.overlay-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    color: var(--CLOUD, #F4F4FD);
+    /* Body */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    /* 150% */
+    letter-spacing: 0.02em;
+    padding: 40px 32px;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-wrapper:hover .overlay-text {
+    transform: translateY(0%);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 /*========/PORTFOLIO MOBILE STYLES======*/
+
+/*========FUTER MOBILE STYLES======*/
+.page-futer {
+    background-color: var(--NAVY-BLUE, #2E2F42);
+    padding: 96px 0;
+}
+
+.futer-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.futer-menu-item {
+    align-items: center;    
+    margin-bottom: 72px;
+    justify-content: center;
+}
+
+.futer-logo {
+    display: flex;
+    margin-bottom: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.17;
+    /* 116.667% */
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--IRIS, #4D5AE5);
+    margin-left: 86px;
+    margin-right: 86px;   
+}
+
+.futer-studio {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.17;
+    /* 116.667% */
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--CLOUD, #F4F4FD);
+}
+
+.futer-text-info {
+    color: var(--CLOUD, #F4F4FD);
+    width: 288px;
+}
+
+
+.futer-social {
+    color: var(--WHITE, #FFF);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    /* 150% */
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+}
+
+.social-list-futer {
+    gap: 16px;
+}
+
+.sli-futer:hover,
+.sli-futer:focus {
+    background-color: #31D0AA;
+}
+
+.subscribe-text {
+    text-align: center;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.subscribe-form-email {
+    width: 288px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.subscribe-form-email::placeholder {
+    color: #FFFFFF;
+}
+
+.subscribe-button {
+    display: flex;
+    width: 165px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    cursor: pointer;
+    background-color: #4D5AE5;
+    border: none;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subscribe-button-icon {
+    margin-left: 16px;
+}
+
+/*========/FUTER MOBILE STYLES======*/
+
+/*---BackDrop Styles---*/
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    width: 100%;
+    height: 100%;
+    background-color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/*---BackDrop Styles---*/
+
+/*==========MODAL WINDOW MOBILE STYLES======*/
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 288px;
+    height: 623px;
+    border-radius: 4px;
+    background-color: var(--DAIRY, #FCFCFC);
+    padding: 72px 16px 24px 16px;
+    min-height: 623px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 1px solid #0000001A;
+    background-color: #E7E9FC;
+    border-radius: 50%;
+    fill: #2E2F42;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.modal-close-btn-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    fill: #ffffff;
+    border: none;
+    background-color: #404BBF;
+}
+
+.modal-window-name {
+    color: var(--NAVY-BLUE, #2E2F42);
+    text-align: center;
+    /* Body Medium */
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    /* 150% */
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+}
+
+/*==========MODAL WINDOW MOBILE STYLES======*/
+
+/*==========REVIEW MOBILE STYLES============*/
+
+.review-form-label {
+    display: block;
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 1.17;
+    /* 116.667% */
+    letter-spacing: 0.04em;
+    color: var(--LIGHT-SLATE, #8E8F99);
+    margin-bottom: 4px;
+}
+
+.review-form-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #2E2F4266;
+    border-radius: 4px;
+    padding-left: 34px;
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-input:focus {
+    border-color: #4D5AE5;
+    outline-color: transparent;
+    outline-offset: 4px;
+}
+
+.review-form-wrapper {
+    margin-bottom: 8px;
+}
+
+.review-form-input-wrapper {
+    position: relative;
+}
+
+.review-form-input-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: #2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-input:focus+.review-form-input-icon {
+    fill: #4D5AE5;
+}
+
+.review-form-wrapper-comment {
+    margin-bottom: 16px;
+}
+
+.review-form-message {
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+    border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+    resize: none;
+    padding: 8px 16px;
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 1.17;
+    /* 116.667% */
+    letter-spacing: 0.04em;
+    color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+
+    background-color: transparent;
+    outline: transparent;
+    outline-offset: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-message::placeholder {
+    color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+}
+
+.review-form-message:focus {
+    border-color: #4D5AE5;
+    outline-color: transparent;
+    outline-offset: 4px;
+}
+
+.review-form-checkbox-wrapper {
+    margin-bottom: 24px;
+}
+
+.review-form-checkbox-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    /* 116.667% */
+    letter-spacing: 0.04em;
+    color: var(--LIGHT-SLATE, #8E8F99);
+}
+
+.review-own-checkbox {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+    border-radius: 2px;
+    cursor: pointer;
+    fill: transparent;
+    margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-checkbox:checked+.review-form-checkbox-label .review-own-checkbox {
+    background-color: #404BBF;
+    fill: #F4F4FD;
+    border: none;
+}
+
+.review-form-checkbox:focus+.review-form-checkbox-label .review-own-checkbox {
+    outline: 2px solid rgba(0, 0, 255, 0.5);
+
+}
+
+.privacy-policy-link {
+    color: #4d5ae5;
+}
+
+.review-form-button {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    /* 150% */
+    letter-spacing: 0.04em;
+    color: #FFF;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 4px;
+    background: var(--IRIS, #4D5AE5);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+/*=====/REVIEW MOBILE STYLES======*/
 
 
 @media screen and (max-width: 767px) {
@@ -468,10 +900,13 @@ body {
 
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 736px;
+        width: 768px;
     }
 
     /*========HEADER TABLET STYLES=========*/
+    .mobile-open-btn {
+        display: none;
+    }
 
     .menu {
        display: flex;
@@ -541,12 +976,12 @@ body {
     /*========/HEADER TABLET STYLES=========*/
     /*========HERO TABLET STYLES==========*/
     .hero {
-        max-width: 768px;
+        width: 768px;
         padding: 112px 0;
     }
 
     .main-head {
-        max-width: 496px;
+        width: 496px;
         font-size: 56px;        
         font-weight: 700;
         line-height: 1.07;
@@ -579,14 +1014,65 @@ body {
     .portfolio-info {
         column-gap: 24px;
         row-gap: 48px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-item {
+        width: calc((100% - 24px) / 2);
     }
     /*========/PORFOLIO TABLET STYLES======*/
+
+    /*========FUTER TABLET STYLES======*/
+    .futer-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 24px;
+        align-items: baseline;
+        justify-content: center;
+    }
+
+    .futer-text-info {
+        width: 264px;
+    }
+
+    .futer-logo {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .futer-social {
+        text-align: left;
+    }
+
+    .subscribe-text {
+        text-align: left;
+    }
+
+    .subscribe-form {
+        flex-direction: row;
+    }
+
+    .subscribe-form-email {
+        width: 264px;
+    }
+    /*========/FUTER TABLET STYLES======*/
+
+    /*=========MODAL TABLET STYLES======*/
+    .modal {
+        width: 408px;
+        height: 584px;
+        padding: 72px 24px 24px 24px;
+        min-height: 584px;
+    }
+
+    /*=========MODAL TABLET STYLES======*/
 }
 
 /*========COMPUTER STULES==========*/
 @media screen and (min-width: 1158px) {
     .container {
-        max-width: 1158px;
+        width: 1158px;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -610,7 +1096,7 @@ body {
     /*========/HEADER STYLES=========*/
     /*========HERO STYLES=========*/
     .hero {
-        max-width: 1440px;
+        width: 1440px;
         padding: 188px 0;
     }
 
@@ -666,35 +1152,30 @@ body {
     .menu-members {
         width: calc((100% - 3 * 24px) / 4);
     }
-     /*========/OUR TEAM=========*/
+    /*========/OUR TEAM=========*/
 
-     /*=========PORTFOLIO========*/
-    .overlay-wrapper {
-        position: relative;
-        overflow: hidden;
+    /*=========PORTFOLIO========*/
+    .portfolio-item {
+        width: calc((100% - 2 * 24px) / 3);
     }
-    
-    .overlay-text {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #4D5AE5;
-        color: var(--CLOUD, #F4F4FD);
-        /* Body */
-        font-family: 'Roboto', sans-serif;
-        font-size: 16px;
-        line-height: 1.5;
-        /* 150% */
-        letter-spacing: 0.02em;
-        padding: 40px 32px;
-        transform: translateY(100%);
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /*=========/PORTFOLIO========*/
+
+    /*=========FUTER============*/
+    .futer-menu {
+        flex-wrap: nowrap;
+        justify-content: space-between;
     }
-    
-    .overlay-wrapper:hover .overlay-text {
-        transform: translateY(0%);
-        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
+    .futer-menu-item {  
+        align-items: baseline;      
+        margin-right: 120px;
+    }    
+    /*=========/FUTER============*/
+
+    /*=========REWIEW FORM======*/
+    .review-form-input {
+        padding-left: 38px;
     }
+    /*=========/REWIEW FORM======*/
+
 }

@@ -429,8 +429,7 @@ body {
 
 .futer-menu {
     display: flex;
-    align-items: baseline;
-    
+    align-items: baseline;    
 }
 
 .futer-menu-item {
@@ -634,6 +633,7 @@ body {
     margin-bottom: 16px;
 }
 /*=====/Modal window styles=====*/
+
 /*=====Review form stules======*/
 .review-form-label {
     display: block;    
