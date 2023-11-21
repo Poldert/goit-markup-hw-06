@@ -126,13 +126,20 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-color: var(--NAVY-BLUE, #2E2F42);
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office.jpg');
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Dark-bgpeople-office320.jpg');
+}
 
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Dark-bgpeople-office320@2x.jpg');
+    }
 }
 
  /*=h1=*/
 .main-head {
-    width: 288px;
+    width: 220px;
     font-size: 36px;
     text-align: center;
     text-transform: capitalize;
@@ -412,7 +419,7 @@ body {
 
 .futer-menu-item {
     align-items: center;    
-    margin-bottom: 72px;
+    padding-bottom: 72px;
     justify-content: center;
 }
 
@@ -908,6 +915,19 @@ body {
         display: none;
     }
 
+    .mobile-menu {
+        display: none;
+    }
+
+    .page-header {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .cont-header {
+        align-items: center;
+    }
+
     .menu {
        display: flex;
        gap: 40px;
@@ -920,6 +940,7 @@ body {
     }
 
     .menu-link {
+        display: block;
         /* Body Medium */
         font-family: 'Roboto', sans-serif;
         font-size: 16px;
@@ -978,6 +999,15 @@ body {
     .hero {
         width: 768px;
         padding: 112px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Dark-bgpeople-office768.jpg');
+    }
+
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/Dark-bgpeople-office768@2x.jpg');
+        }
     }
 
     .main-head {
@@ -1027,9 +1057,9 @@ body {
     .futer-menu {
         flex-direction: row;
         flex-wrap: wrap;
-        row-gap: 24px;
-        align-items: baseline;
-        justify-content: center;
+        gap: 0 24px;
+        align-items: baseline; 
+        padding-left: 108px;       
     }
 
     .futer-text-info {
@@ -1098,6 +1128,15 @@ body {
     .hero {
         width: 1440px;
         padding: 188px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office.jpg');
+    }
+
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1158px),
+    screen and (min-resolution: 2dppx) and (min-width: 1158px) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office-1people-office@2x.jpg');
+        }
     }
 
     .main-head {
@@ -1163,12 +1202,13 @@ body {
     /*=========FUTER============*/
     .futer-menu {
         flex-wrap: nowrap;
+        gap: unset;
         justify-content: space-between;
     }
 
     .futer-menu-item {  
         align-items: baseline;      
-        margin-right: 120px;
+        margin-right: avto;
     }    
     /*=========/FUTER============*/
 
